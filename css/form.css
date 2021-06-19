@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* Cores do Site */
+:root {
+    --color1: #ffffff;
+    --color2: #c1bbb1;
+    --color3: #0F0C0A;
+    --color4: #C71100;
+
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* FORMULÁRIO CADASTRO*/
+form {
+    padding: 3% 2% 3% 2%;
+}
+
+.legend {    
+    font-weight: lighter;
+    font-size: 19pt;
+    font-family: var(--font);
+    color: var(--color4);
+}

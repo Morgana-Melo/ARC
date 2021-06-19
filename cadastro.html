@@ -1,0 +1,136 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>ARC Reivindicação do Cidadão.</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <title>ARC Reivindicação do Cidadão.</title>
+    </head>
+
+    <body class="home">
+        <nav class="navbar  navbar-expand-lg" id="menu"></nav>
+        <main>
+            <form method="POST" id="fContato" action="mailto:infoconnect36@gmail.com">
+                <h4 class="legend">Cadastro do Usuário</h4>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cNome"> Nome </label> 
+                        <input class="form-control" type="text" name="tNome" id="cNome" size="20" maxlength="60" placeholder="Nome completo"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cMail">E-mail</label> 
+                        <input class="form-control" type="email" name="tMail" id="cMail" size="30" maxlength="40" placeholder="Digite seu Email"/>
+                    </div>
+                </div>                  
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cSenha">Senha</label> 
+                        <input class="form-control" type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cConf">Confirmar senha</label> 
+                        <input class="form-control" type="password" name="tConf" id="cConf" size="8" maxlength="8" placeholder="Repita senha." required/>
+                    </div>                    
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Sexo</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tSexo" id="cMasc" checked/><label class="form-check-label" for="cMasc">Masculino</label>
+                        </div>                           
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tSexo" id="cFem"/><label class="form-check-label" for="cFem">Feminino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tSexo" id="cOutro"/><label class="form-check-label" for="cOutro">Outro</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cNasc">Data de Nacimento</label> 
+                        <input class="form-control" data-date-end-date="0d" type="text" name="tNasc" id="cNasc" placeholder="DD/MM/YYY"/>
+                    </div>                    
+                </div>
+                
+                <h4 class="legend">Endereço do Usuário</h4>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cRua">Logradouro</label> 
+                        <input class="form-control" type="text" name="tRua" id="cRua" maxlength="60" placeholder="Rua, Av, Trav, ..."/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cBairro">Bairro</label> 
+                        <input class="form-control" type="text" name="tBairro" id="cBairro" maxlength="60" placeholder=""/>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="cNum">Número</label> 
+                        <input class="form-control" type="number" name="tNum" id="cNum" maxlength="20"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cCid">Cidade</label>
+                        <input class="form-control" type="text" name="tCid" id="cCid" maxlength="50" placeholder=""/>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cCep">Cep</label> 
+                        <input class="form-control" type="text" name="tCep" id="cCep" maxlength="9" placeholder="00000-000" required pattern="\d{5}-\d{3}"/>
+                    </div>                    
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cDDD">DDD</label> 
+                        <input class="form-control" type="text" name="tDdd" id="cDdd"  maxlength="3" placeholder="12"/>                        
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cTel">Telefone</label> 
+                        <input class="form-control" type="text" name="tTel" id="cTel" maxlength="9" placeholder="123456789"/>
+                    </div>                    
+                </div>
+            
+                <button type="submit" name="tEnviar" id="cEnviar" class="btn btn-primary">Enviar</button>
+            </form>
+        </main>    
+        <footer id="rodape"></footer>
+
+        <script src="js/menu.js"></script>
+        <script src="js/rodape.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+        <!-- Include Date Range Picker -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/locales/bootstrap-datepicker.pt-BR.min.js"></script>        
+        <script>
+            $(document).ready(function(){
+              var date_input=$('input[name="tNasc"]'); 
+              var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+              var options={
+                language: 'pt-BR',
+                format: 'dd/mm/yyyy',
+                container: container,                
+                todayHighlight: true,
+                autoclose: true,                
+              };
+              date_input.datepicker(options);
+            })
+        </script>
+    </body>
+
+</html>

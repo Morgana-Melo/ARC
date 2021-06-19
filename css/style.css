@@ -1,0 +1,88 @@
+/* Cores do Site */
+:root {
+    --color1: #ffffff;
+    --color2: #c1bbb1;
+    --color3: #0F0C0A;
+    --color4: #C71100;
+
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Tira as margens*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*FORMATAÇÃO DO MENU*/
+
+nav#menu {    
+    background-color: #C71100;
+}
+
+nav#menu ul {
+    background-color: transparent;    
+    list-style: none;
+    font-size: 1.5rem ;
+    text-transform: uppercase;
+    font-style: italic ;
+    font-family: var(--font);        
+}
+
+nav#menu a {
+    color: var(--color1);
+}
+nav#menu a:hover {
+    color: var(--color3);
+}
+nav#menu li.active a {
+    text-decoration: underline;
+}
+nav#menu h1 {
+    display: none;
+}
+
+/* TEXTO A EMPRESA*/
+.titulo3 {    
+    color: var(--color4);
+    font-family: var(--font);
+    font-weight: lighter;
+
+}
+
+#cabecalho{
+    background-color: #C71100;
+}
+
+/*LOGO*/
+#logo{
+    width: 125px;
+    height: 68px;
+}
+
+main {
+    padding: 2%;
+}
+
+/* RODAPÉ*/
+#rodape {    
+    color: var(--color1);
+    background-color: var(--color3);
+    bottom:0;
+    width:100%;
+    height:280px;   /* Mesma Altura do Rodapé */   
+    padding-top: 2%;
+    padding-left: 2%;
+    display: flex;
+}
+
+.footerNav {
+    color: var(--color1);
+}
+.footerNav:hover {
+    color: var(--color2);
+}
+
+.footerText{
+    color: var(--color2);
+}

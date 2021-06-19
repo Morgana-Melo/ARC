@@ -1,0 +1,146 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8"/>        
+        <link rel="stylesheet" href="css/form.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>ARC Reivindicação do Cidadão.</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>ARC Reivindicação do Cidadão.</title>
+    </head>
+
+    <body class="home">
+        <nav class="navbar  navbar-expand-lg" id="menu"></nav>
+        <main>
+            <form  method="POST" id="solicitacao" action="mailto:infoconnect36@gmail.com">                
+                <h4 class="legend">Seus Dados</h4>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cNome"> Nome </label> 
+                        <input class="form-control" type="text" name="tNome" id="cNome" size="20" maxlength="60" placeholder="Nome completo"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cMail">E-mail</label> 
+                        <input class="form-control" type="email" name="tMail" id="cMail" size="30" maxlength="40" placeholder="Digite seu Email"/>
+                    </div>
+                </div> 
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cDDD">DDD</label> 
+                        <input class="form-control" type="text" name="tDdd" id="cDdd"  maxlength="3" placeholder="12"/>                        
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="cTel">Telefone</label> 
+                        <input class="form-control" type="text" name="tTel" id="cTel" maxlength="9" placeholder="123456789"/>
+                    </div>                    
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="cMensagem">Sua mensagem</label>
+                        <textarea class="form-control" name="tMensagem" id="cMensagem" placeholder="mensagem*" required></textarea>
+                    </div>                
+                </div>
+                <div class="form-group">
+                    <div class="custom-file">                    
+                        <input type="file" class="form-control-file custom-file-input" id="cArquivo">
+                        <label class="custom-file-label" for="cArquivo" data-browse="Navegar">Escolher Arquivo</label>
+                    </div>
+                    
+                </div>                        
+
+                <h4 class="legend">Dados da Entidade</h4>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">                        
+                        <input type="text" class="form-control" maxlength="256" name="nome-inst" data-name="nome-inst" placeholder="Nome da Instituição" id="nome-inst" required=""/>
+                    </div>
+                    <div class="form-group col-md-6">                        
+                        <input type="text" class="form-control" maxlength="256" name="departamento" data-name="departamento" placeholder="Departamento" id="departamento" required=""/>
+                    </div>
+                </div> 
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <select class="custom-select" id="tipo" name="tipo" data-name="tipo" required="">
+                            <option selected disabled value="">Tipo de entidade</option>
+                            <option value="Governo Municipal">Governo Municipal</option>
+                            <option value="Governo Estadual">Governo Estadual</option>
+                            <option value="Governo Federal">Governo Federal</option>
+                        </select>   
+                    </div>
+                    <div class="form-group col-md-4">                    
+                        <input class="form-control" type="text" name="tCid" id="cCid" maxlength="50" placeholder="Cidade" required=""/>
+                    </div>
+                    <div class="form-group col-md-4">                    
+                        <select class="custom-select" id="estado" name="estado" data-name="estado" required="" >
+                            <option selected disabled value="">Estado</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>  
+                    </div>
+                </div> 
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <select class="custom-select" id="ctamanho" name="tamanho" data-name="tamanho" required="">
+                            <option selected disabled value="">Tamanho da cidade</option>
+                            <option value="1">De 0 a 40 mil habitantes</option>
+                            <option value="2">De 40 a 70 mil habitantes</option>
+                            <option value="3">De 70 a 150 mil habitantes</option>
+                            <option value="4">De 150 a 250 mil habitantes</option>
+                            <option value="5">De 250 a 500 mil habitantes</option>
+                            <option value="6">Acima de 500 mil habitantes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <select class="custom-select" required="" name="Motivo do Contato" id="motivo-de-contato" data-name="Motivo do Contato" class="select-field-gov w-select">
+                            <option value="" hidden="" disabled="" selected="">Motivo de contato</option>
+                            <option value="Quero um sistema de atendimento ao cidadão">Quero um sistema de atendimento ao cidadão</option>
+                            <option value="Melhorar a gestão e planejamento da cidade com a participação do cidadão">Quero fazer uma solicitação de serviço</option>
+                        </select>
+                    </div>
+                </div>                
+
+                <button type="submit" name="tEnviar" id="cEnviar" class="btn btn-primary">Enviar</button>                   
+            </form>
+        </main>
+        
+        <footer id="rodape"></footer>
+        
+        <script src="js/menu.js"></script>
+        <script src="js/rodape.js"></script>
+    </body>
+</html>

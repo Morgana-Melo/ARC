@@ -1,0 +1,52 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8"/>        
+        <link rel="stylesheet" href="css/form.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>ARC Reivindicação do Cidadão.</title>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>ARC Reivindicação do Cidadão.</title>
+    </head>
+
+    <body class="home">
+        <nav class="navbar  navbar-expand-lg" id="menu"></nav>
+        <main>
+            <form  method="POST" id="resposta" action="mailto:infoconnect36@gmail.com">
+                <h3>Resposta a sua solicitação</h3>
+                <h4 class="legend"> Razão Social</h4>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" class="field-form-gov w-input" maxlength="256" name="nome-inst" data-name="nome-inst" placeholder="Nome da Instituição" id="nome-inst" required=""/>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" class="field-form-gov w-input" maxlength="256" name="departamento" data-name="departamento" placeholder="Departamento" id="departamento" required=""/>
+                    </div>                    
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-file">                    
+                        <input type="file" class="form-control-file custom-file-input" id="cArquivo">
+                        <label class="custom-file-label" for="cArquivo" data-browse="Navegar">Escolher Arquivo</label>
+                    </div>                            
+                </div>  
+    
+                <button type="submit" name="tEnviar" id="cEnviar" class="btn btn-primary">Enviar</button>                    
+            </form>    
+        </main>        
+
+        <footer id="rodape"></footer>
+
+        <script src="js/menu.js"></script>
+        <script src="js/rodape.js"></script>
+    </body>
+</html>
