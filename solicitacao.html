@@ -19,8 +19,8 @@
 
     <body class="home">
         <nav class="navbar  navbar-expand-lg" id="menu"></nav>
-        <main>
-            <form  method="POST" id="solicitacao" action="mailto:infoconnect36@gmail.com">                
+        <main id="main">
+            <!-- <form  method="POST" id="solicitacao" action="mailto:infoconnect36@gmail.com">                
                 <h4 class="legend">Seus Dados</h4>
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -135,7 +135,43 @@
                 </div>                
 
                 <button type="submit" name="tEnviar" id="cEnviar" class="btn btn-primary">Enviar</button>                   
-            </form>
+            </form> -->
+            <div class="d-flex justify-content-between">
+                <h4 class="legend">Suas Solicitações</h4>
+                <button class="btn btn-danger">Nova Solitação</button>
+            </div>
+            
+            <br><br>
+            <table class="table table-striped">
+                <thead id="tableHeader">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Data de Criação</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
         </main>
         
         <footer id="rodape"></footer>

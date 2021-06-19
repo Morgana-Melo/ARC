@@ -9,11 +9,10 @@
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-/* FORMULÁRIO CADASTRO*/
-form {
-    padding: 3% 2% 3% 2%;
+#tableHeader {
+    background-color: var(--color4);
+    color: var(--color1);
 }
-
 .legend {    
     font-weight: lighter;
     font-size: 19pt;
