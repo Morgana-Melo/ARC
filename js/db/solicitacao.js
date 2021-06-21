@@ -33,15 +33,15 @@ function generateLines(data){
 
 
 function loadTable(idUsuario){
-    let request = new XMLHttpRequest()
+    let request = new XMLHttpRequest();
     request.open("GET",`http://127.0.0.1:8000/usuarios/${idUsuario}`);
     request.send();
     request.onload = () => {
         if(request.status === 200){
-            resp = JSON.parse(request.response)                        
+            resp = JSON.parse(request.response);                      
             document.getElementById("tableBody").innerHTML = generateLines(resp["data"]);
         } else {
-        console.log("Page not found")// if link is broken, output will be page not found
+        console.log("Page not found");// if link is broken, output will be page not found
         }
     }
 }
