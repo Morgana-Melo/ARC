@@ -26,3 +26,8 @@ app.add_middleware(
 def gettrabalhosID(id_usuario: int):        
     db = crud.CRUD()
     return {'statusCode': 200, 'data': db.getTrabalhos(id_usuario)}
+
+@app.get("/trabalho/{id_trabalho}")
+def gettrabalhosID(id_trabalho: int):        
+    db = crud.CRUD()
+    return {'statusCode': 200, 'data': db.getMessagensTrabalho(id_trabalho)}
