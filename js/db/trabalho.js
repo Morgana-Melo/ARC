@@ -23,6 +23,7 @@ function generateMensages(data, idUsuario){
         line = data[i];                
         linhas += generateMensage(line,idUsuario);
     }
+    console.log(linhas)
     return linhas;
 }
 
@@ -33,10 +34,11 @@ function loadMessages(idTrabalho, idUsuario){
     request.onload = () => {
         if(request.status === 200){
             resp = JSON.parse(request.response); 
-            document.getElementsByClassName("msg_history").innerHTML = generateMensages(resp["data"], idUsuario);                                 
-            document.getElementById("tableBody").innerHTML = generateLines(resp["data"]);
+            document.getElementById("msg_history").innerHTML = generateMensages(resp["data"], idUsuario);                                             
         } else {
         console.log("Page not found")// if link is broken, output will be page not found
         }
     }
 }
+
+loadMessages(1,1)
