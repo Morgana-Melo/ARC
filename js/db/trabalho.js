@@ -23,7 +23,6 @@ function generateMensages(data, idUsuario){
         line = data[i];                
         linhas += generateMensage(line,idUsuario);
     }
-    console.log(linhas)
     return linhas;
 }
 
