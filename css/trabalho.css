@@ -128,8 +128,15 @@ img{ max-width:100%;}
   top: 11px;
   width: 33px;
 }
-.messaging { padding: 0 0 50px 0;}
+
 .msg_history {
   height: 516px;
   overflow-y: auto;
+}
+
+.legend {    
+    font-weight: lighter;
+    font-size: 19pt;
+    font-family: var(--font);
+    color: var(--color4);
 }
