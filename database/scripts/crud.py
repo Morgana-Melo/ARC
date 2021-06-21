@@ -9,6 +9,10 @@ class CRUD(object) :
         resp = self.database.cursor.execute( 'SELECT * FROM Trabalho WHERE Trabalho.idUsuario = ?', (idUsuario,))
         return resp.fetchall()
     
+    def getMessagensTrabalho(self, idTrabalho: int):
+        resp = self.database.cursor.execute('SELECT * FROM Mensagem WHERE Mensagem.idTrabalho = ? ORDER BY Mensagem.dia', (idTrabalho,))
+        return resp.fetchall()
+
     def imprimirTrabalhosPorID(self, id: int):
         lista = self.getTrabalhos(idUsuario= id)
         print('{:>3s} {:>3s} {:>3s} {:>3s} {:21s} {:>3s}'.format(
