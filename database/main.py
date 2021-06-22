@@ -20,6 +20,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+class Data(BaseModel):
+    trabalhoID: int
+    sender: int
+    receive: int
+    msg: str
 
 
 @app.get("/usuarios/{id_usuario}")
@@ -28,6 +33,11 @@ def gettrabalhosID(id_usuario: int):
     return {'statusCode': 200, 'data': db.getTrabalhos(id_usuario)}
 
 @app.get("/trabalho/{id_trabalho}")
-def gettrabalhosID(id_trabalho: int):        
+def getMensagensTrabalho(id_trabalho: int):        
     db = crud.CRUD()
     return {'statusCode': 200, 'data': db.getMessagensTrabalho(id_trabalho)}
+
+@app.post("/trabalho")
+def newMensagemTrabalho(data : Data):
+    db = crud.CRUD()
+    return {'statusCode': 200, 'data': db.insertMensagemTrabalho(data.trabalhoID, data.sender, data.receive, data.msg)}
