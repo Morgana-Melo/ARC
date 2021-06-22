@@ -33,7 +33,32 @@ function loadMessages(idTrabalho, idUsuario){
     request.onload = () => {
         if(request.status === 200){
             resp = JSON.parse(request.response); 
-            document.getElementById("msg_history").innerHTML = generateMensages(resp["data"], idUsuario);                                             
+            document.getElementById("msg_history").innerHTML = generateMensages(resp["data"], idUsuario);                                                   
+        } else {
+        console.log("Page not found")// if link is broken, output will be page not found
+        }
+    }
+}
+
+function insertMessage(){
+
+    var mensagem = document.getElementById("msg").value;
+    let request = new XMLHttpRequest()
+    request.open("POST",`http://127.0.0.1:8000/trabalho`);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify({
+        trabalhoID: 1,
+        sender: 1,
+        receive: 2,
+        msg: mensagem
+    }));
+    request.onload = () => {
+        if(request.status === 200){
+            resp = JSON.parse(request.response);             
+            var msgAnteriores = document.getElementById("msg_history").innerHTML;
+            var newMsg = generateMensage(resp["data"], 1);
+            document.getElementById("msg_history").innerHTML = msgAnteriores + newMsg;
+                                                  
         } else {
         console.log("Page not found")// if link is broken, output will be page not found
         }
